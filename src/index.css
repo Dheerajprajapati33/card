@@ -1,0 +1,69 @@
+.card-container{
+  width: 350px;
+  height: 200px;
+  perspective: 1000px;
+}
+.card-inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-container.flip .card-inner{
+  transform: rotateY(180deg);
+}
+/*  */
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  /* color: white; */
+  backface-visibility: hidden;
+}
+.card-front{
+  background:linear-gradient(135deg,#6294f0,#2a5298);
+  color: white;
+  padding: 20px;
+}
+.card-back{
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #6294f0, #2a5298);
+  padding: 20px;
+}
+.magnetic-strip{
+  background: black;
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+}
+.signature-area{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signature-strip{
+  background: #eee;
+  width: 70%;
+  height: 35px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding-left:14px;
+  /* color: black;
+  justify-content: space-between;
+  border-radius: 3px; */
+}
+.cvv-box{
+  background: white;
+  /* color: black; */
+  width: 60px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  /* border-radius: 3px; */
+}
